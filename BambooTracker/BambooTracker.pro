@@ -551,8 +551,8 @@ INCLUDEPATH += \
     $$PWD/module \
     $$PWD/io
 
-include("stream/RtAudio/RtAudio.pri")
-include("midi/RtMidi/RtMidi.pri")
+# Linking settings
+!contains(LIBS, -lrtaudio):include("stream/RtAudio/RtAudio.pri")
+!contains(LIBS, -lrtmidi):include("midi/RtMidi/RtMidi.pri")
 
 include("../data/data.pri")
-

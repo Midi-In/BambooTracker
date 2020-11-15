@@ -52,3 +52,5 @@ else:bsd {
         LIBS += -ljack
     }
 }
+
+INCLUDEPATH += $$PWD
